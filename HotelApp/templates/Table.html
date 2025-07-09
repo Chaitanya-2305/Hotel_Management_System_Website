@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FooDeliciou'S</title>
+    <link rel="stylesheet" href="{% static 'CSS/Tables.css'%}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("/static/images/Reserve.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .logo h3 {
+            color: rgb(255, 196, 0);
+            font-family: cursive;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+         
+        }
+        .nav-links a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+        .book-btn {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: medium;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .book-btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .submit-btn {
+            background-color: rgb(255, 196, 0);
+            color: white;
+            font-size: 16px;
+            border: none;
+            width: 60%;
+            justify-items: center;
+            margin-left: 75px;
+            cursor: pointer;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: orange;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                margin-left: 0;
+            }
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="{% static 'images/cartoon.jpg' %}" alt="Logo">
+            <h3>FooDeliciou'S</h3>
+        </div>
+        <div class="nav-links">
+            <a href="{% url 'homeurl' %}">Home</a>
+            <a href="{% url 'menuurl' %}">Menu</a>
+            <a href="{% url 'abouturl' %}">About Us</a>
+            <a href="{% url 'contacturl' %}">Contact Us</a>
+        </div>
+        <a href="{% url 'tableurl' %}">
+            <button class="book-btn">Book Table</button>
+        </a>
+    </div>
+    <div class="container">
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <h2>Make a Reservation</h2>
+            <label>Select Date:</label>
+            <input type="datetime-local" name="date">
+            <label>Number of Guests:</label>
+            <input type="number" min="1" placeholder="Guest Count" name="guestcnt">
+            <label>Your Name:</label>
+            <input type="text" placeholder="Enter Your Name" name="name">
+            <label>Mobile Number:</label>
+            <input type="number" placeholder="1234567890" name="number">
+            <label>Email:</label>
+            <input type="email" placeholder="your@email.com" name="mail">
+            <label>Special Requests:</label>
+            <input type="text" placeholder="Any special requests..." name="splreq">
+            <input type="submit" value="Book" class="submit-btn">
+        </form>
+        <p id="res" style="color: black;">{{res}}</p>
+    </div>
+</body>
+</html>

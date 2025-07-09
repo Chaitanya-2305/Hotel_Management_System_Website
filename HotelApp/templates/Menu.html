@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACN'S FOODELICIOUS</title>
+    <link rel="stylesheet" href="{% static 'CSS/Menu.css' %}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        #title {
+            font-size: xx-large;
+            padding: 20px 0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+         
+        }
+        .nav-links a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+        .book-btn {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: -10px;
+            font-size: medium;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .book-btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: large;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: rgb(255, 196, 0);
+        }
+        .menu-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .menu-section {
+            width: 30%;
+            text-align: left;
+        }
+        .menu-section h2 {
+            color: goldenrod;
+            margin-bottom: 10px;
+            margin-left: 70px;
+        }
+        .menu-section ul {
+            list-style: none;
+        }
+        .menu-section ul li {
+            margin: 10px 0;
+            margin-left: 70px;
+            font-size: large;
+            transition: 0.3s;
+        }
+        .menu-section ul li:hover {
+            transform: scale(1.1);
+            color: rgb(255, 196, 0);
+        }
+        .menu-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .quote {
+            margin-top: 30px;
+            font-size: xx-large;
+            font-family: 'Cursive', sans-serif;
+            color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>ACN'S FOODELICIOUS</h1>
+    </div>
+    <div class="nav-links">
+        <a href="{% url 'homeurl' %}">Home</a>
+        <a href="{% url 'menuurl' %}" style="color:  rgb(255, 196, 0);">Menu</a>
+        <a href="{% url 'abouturl' %}">About Us</a>
+        <a href="{% url 'contacturl' %}">Contact Us</a>
+    
+    <a href="{% url 'tableurl' %}">
+        <button class="book-btn">Book Table</button>
+    </a>
+    </div>
+    <div class="nav-links">
+        <a href="#starters">Starters</a>
+        <a href="#maincourse">Main Course</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#desserts">Desserts</a>
+    </div>
+    <div class="menu-container" id="starters">
+        <div class="menu-section">
+            <h2>Starters</h2>
+            <ul>
+                <li>Spring Rolls - $5</li>
+                <li>Garlic Bread - $4</li>
+                <li>Paneer Tikka - $7</li>
+                <li>Chicken Wings - $8</li>
+                <li>Cheese Nachos - $6</li>
+                <li>Stuffed Mushrooms - $7</li>
+                <li>French Fries - $5</li>
+                <li>Onion Rings - $6</li>
+            </ul>
+        </div>
+        <div class="menu-image">
+            <img src="{% static 'images/cartoon.jpg' %}" alt="Delicious Food">
+        </div>
+        <div class="menu-section" id="maincourse">
+            <h2>Main Course</h2>
+            <ul>
+                <li>Veg Biryani - $12</li>
+                <li>Butter Chicken - $15</li>
+                <li>Paneer Butter Masala - $13</li>
+                <li>Grilled Fish - $18</li>
+                <li>BBQ Ribs - $20</li>
+                <li>Lasagna - $14</li>
+                <li>Chicken Alfredo Pasta - $16</li>
+                <li>Margherita Pizza - $14</li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-container">
+        <div class="menu-section" id="drinks">
+            <h2>Drinks</h2>
+            <ul>
+                <li>Mango Lassi - $5</li>
+                <li>Cold Coffee - $4</li>
+                <li>Mint Mojito - $6</li>
+                <li>Soft Drinks - $3</li>
+                <li>Fresh Orange Juice - $5</li>
+                <li>Strawberry Smoothie - $6</li>
+                <li>Hot Chocolate - $5</li>
+                <li>Espresso - $4</li>
+            </ul>
+        </div>
+        <div class="menu-section" id="sidedishes">
+            <h2>Side Dishes</h2>
+            <ul>
+                <li>Garlic Mashed Potatoes - $6</li>
+                <li>Coleslaw - $4</li>
+                <li>Caesar Salad - $7</li>
+            </ul>
+        </div>
+        <div class="menu-section" id="desserts">
+            <h2>Desserts</h2>
+            <ul>
+                <li>Chocolate Brownie - $6</li>
+                <li>Ice Cream Sundae - $5</li>
+                <li>Rasmalai - $7</li>
+                <li>Gulab Jamun - $6</li>
+                <li>Cheesecake - $8</li>
+                <li>Tiramisu - $9</li>
+                <li>Chocolate Lava Cake - $7</li>
+                <li>Fruit Tart - $6</li>
+            </ul>
+        </div>
+    </div>
+    <div class="quote">
+        ❝Satisfy your cravings with food made to lift your mood.❞
+    </div>
+</body>
+</html>

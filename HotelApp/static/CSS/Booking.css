@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#tit{
+    text-align: center;
+    background-color: indigo;
+    color: White;
+    height: 60px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+#td{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 40px;
+}
+#table{
+    margin-top: 30px;
+}

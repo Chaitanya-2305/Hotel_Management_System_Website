@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FooDeliciou'S</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: black;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-right: 20px;
+        }
+
+        .nav-links div {
+            font-size: x-large;
+            display: inline-block;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+
+        .nav-links div:hover {
+            transform: scale(1.2);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        .book-btn {
+            background-color: #FFD700;
+            color: black;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: large;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .book-btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            align-items: center;
+        }
+
+        .about-content .text {
+            max-width: 50%;
+        }
+
+        .about-content .text h2 {
+            font-size: 36px;
+            color: #FFD700;
+        }
+
+        .about-content .text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .about-content .quote {
+            font-style: italic;
+            color: #FFD700;
+            margin-top: 15px;
+        }
+
+        .about-content .image img {
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'images/cartoon.jpg' %}" alt="" id="images">
+                <span style="color: #FFD700; font-size: 24px; font-weight: bold;">FooDeliciou'S</span>
+            </div>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <div><a href="{% url 'homeurl' %}">Home</a></div>
+                    <div><a href="{% url 'menuurl' %}">Menu</a></div>
+                    <div><a href="{% url 'abouturl' %}" style="color: #FFD700;">About Us</a></div>
+                    <div><a href="{% url 'contacturl' %}">Contact Us</a></div>
+                </div>
+                <a href="{% url 'tableurl' %}">
+                    <button class="book-btn">Book Table</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="about">
+        <div class="about-content">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>Welcome to ACN FooDeliciou'S, your ultimate destination for delicious flavors and exquisite dining. We take pride in serving the finest quality meals, prepared with fresh ingredients and a passion for excellence.</p>
+                <p>Our chefs craft each dish with precision, ensuring an unforgettable experience for every guest. Whether you're here for a casual meal or a special occasion, FooDeliciou'S guarantees an exceptional dining atmosphere.</p>
+                <p class="quote">"Food is not just about eating energy. It's an experience."</p>
+                <p class="quote">"Great food, great company, great memories!"</p>
+                <p class="quote">"Cooking is an art, but all art requires knowing something about the techniques and materials."</p>
+                <p><strong>Taste the best food in town. Book a table and see for yourself!</strong></p>
+                <a href="{% url 'tableurl' %}"><button class="book-btn">Reserve Now</button></a>
+            </div>
+            <div class="image">
+                <img src="{% static 'images/cartoon.jpg' %}" alt="Delicious Food">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

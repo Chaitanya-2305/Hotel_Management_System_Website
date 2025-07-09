@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/Login.css' %}">
+</head>
+<body id="main">
+    <div id="title">
+        <h1>ACN'S FOODELICIOU'S</h1>
+    </div>
+    <div>
+        <img src="{% static 'images/cartoon.jpg' %}" alt="" id="images">
+    </div>
+    <div id="log">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="" id="names">
+                User Name 
+                <input type="text" name="uname">
+            </label><br><br>
+            <label for="" id="names">
+                Password 
+                <input type="text" name="pwd">
+            </label><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div id="sign">
+        <a href="{% url 'signupurl' %}">SignUp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="">Forget</a>
+    </div>
+</body>
+</html>

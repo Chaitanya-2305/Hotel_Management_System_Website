@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FooDeliciou'S - Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/Home.css'%}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("{% static 'images/contact.png' %}") no-repeat center center fixed;
+            opacity: 0.5px;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Welcome, .back, #Acn, #Food {
+            position: absolute;
+            color: white;
+            font-family: cursive;
+            font-size: xx-large;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-left: 610px;
+            margin-top: 20px;
+        }
+
+        .nav-links div {
+            font-size: x-large;
+            display: inline-block;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+
+        .nav-links div:hover {
+            transform: scale(1.2);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        .book-btn {
+            background-color: #FFD700;
+            color: black;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: large;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .book-btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        .Del {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 80px;
+            color: rgb(255, 196, 0);
+            font-family: cursive;
+        }
+
+        #Cap {
+            position: absolute;
+            margin-top: 430px;
+            margin-left: 900px;
+            color: gold;
+            font-family: cursive;
+            font-size: medium;
+        }
+
+        #Cap h5:hover {
+            transition: 1s;
+            transform: scale(1.1);
+            color: gold;
+        }
+
+        .Image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+        .Image {
+            position: absolute;
+            margin-left: 76%;
+            margin-top: 70px;
+            transition: 1s;
+        }
+
+        .DelI img {
+            position: absolute;
+            margin-top: 10px;
+            width: 80px;
+            border-radius: 50%;
+            height: 60px;
+        }
+
+        /* Contact Us Form */
+        #link {
+            /* margin-top: 20px; */
+            padding: 50px 20px;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            color: white;
+            padding-bottom: 100px;
+        }
+
+        #link h2 {
+            text-align: center;
+            font-family: cursive;
+            color: #FFD700;
+        }
+
+        #link p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            background-color: #FFD700;
+            color: black;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: large;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        form button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        /* Ensures background continues for long pages */
+        html, body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="Del"><h3>FooDeliciou'S</h3></div>
+    <div class="DelI">
+        <img src="{% static 'images/cartoon.jpg' %}" alt="">
+    </div>
+    <div class="nav-container">
+        <div class="nav-links">
+            <div><a href="{% url 'homeurl' %}">Home</a></div>
+            <div><a href="{% url 'menuurl' %}">Menu</a></div>
+            <div><a href="{% url 'abouturl' %}">About Us</a></div>
+            <div><a href="{% url 'contacturl' %}"  style="color: #FFD700;">Contact Us</a></div>
+        </div>
+        <a href="{% url 'tableurl' %}">
+            <button class="book-btn">Book Table</button>
+        </a>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="link">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Please fill out the form below.</p>
+        <form action="{% url 'contacturl' %}" method="POST">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="mail" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="spl" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="res" style="color: white;">{{con}}</p>
+    </div>
+</body>
+</html>
+
+

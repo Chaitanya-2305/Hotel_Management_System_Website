@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-image: url("{% static 'images/log.png' %}") no-repeat center center fixed;
+}
+#main{
+    background-color: black;
+}
+#title{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+#log{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+#log input[type = text]{
+    width: 220px;
+    height: 40px;
+}
+#log input[type = submit]{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 10px;
+    border: 0cap;
+}
+#sign{
+    margin-top: 30px;
+    text-align: center;
+}
+#sign a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+}
+#images{
+    margin-left: 550px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#names{
+    font-size: x-large;
+}

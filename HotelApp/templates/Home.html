@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/Home.css'%}">
+    <style>
+        body{
+    font-family: Arial, sans-serif;
+    background: url("/static/images/b dine.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+}
+.Welcome{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: 150px;
+    font-family:cursive;
+    color: white;
+    font-size: xx-large;
+}
+.back{
+    position: absolute;
+    margin-left: 660px;
+    margin-top: 220px;
+    font-family:cursive;
+    color: white;
+    font-size: xx-large;
+}
+#Acn{
+    position: absolute;
+    margin-left: 740px;
+    margin-top: 290px;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: xx-large;
+}
+#Food{
+    position: absolute;
+    margin-left: 740px;
+    margin-top: 350px;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: xx-large;
+}
+/* .Home a{
+    color: white;
+    text-decoration: none;
+}
+.Home{
+    float: right;
+    margin-top: 50px;
+    margin-right: 620px;
+}
+.Home{
+    font-family: Arial, sans-serif;
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Home:hover{
+    transform:scale(1.2);
+}
+.Home a:hover{
+    color: rgb(255, 196, 0);
+}
+.Menu a{
+    color: white;
+    text-decoration: none;
+}
+.Menu{
+    display: flex;
+    float: right;
+    margin-top: 50px;
+    margin-right: -180px;
+}
+.Menu{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Menu:hover{
+    transform:scale(1.2);
+}
+.Menu a:hover{
+    color:rgb(255, 196, 0);
+}
+.About a{
+    color: white;
+    text-decoration: none;
+}
+.About{
+    float: right;
+    margin-top: 50px;
+    margin-right: -320px;
+}
+.About{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.About:hover{
+    transform:scale(1.2);
+}
+.About a:hover{
+    color:rgb(255, 196, 0);
+}
+.Contact a{
+    color: white;
+    text-decoration: none;
+}
+.Contact{
+    float: right;
+    margin-top: 50px;
+    margin-right: -570px;
+}
+.Contact{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Contact:hover{
+    transform:scale(1.2);
+}
+.Contact a:hover{
+    color: rgb(255, 196, 0);
+}
+.Book a{
+    color: white;
+    text-decoration: none;
+}
+.Book{
+    display: flex;
+    float: right;
+    margin-top: 40px;
+    margin-right: -700px;
+}
+.Book{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Book:hover{
+    transform:scale(1.2);
+}
+.Book input[type = button]{
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}
+input[type = button]{
+    background-color: rgb(255, 196, 0);
+    color: white;
+} */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 610px;
+    margin-top: 20px;
+}
+
+.nav-links div {
+    font-size: x-large;
+    display: inline-block;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.nav-links div:hover {
+    transform: scale(1.2);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+.book-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: large;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+.about-content .text {
+    max-width: 50%;
+}
+
+.about-content .text h2 {
+    font-size: 36px;
+    color: #FFD700;
+}
+
+.about-content .text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-content .quote {
+    font-style: italic;
+    color: #FFD700;
+    margin-top: 15px;
+}
+
+.about-content .image img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+}
+.Del{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 78px;
+    position: absolute;
+    color: rgb(255, 196, 0);
+    font-family: cursive;
+}
+#Cap{
+    position: absolute;
+    margin-top: 430px;
+    margin-left: 900px;
+    color: white;
+    color: gold;
+    font-family: cursive;
+    font-size: medium;
+}
+#Cap h5:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    color: gold;
+}
+.Image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.Image{
+    position: absolute;
+    margin-left: 76%;
+    margin-top: 70px;
+    transition: 1s;
+}
+.DelI img{
+    position: absolute;
+    margin-top: 10px;
+    width: 80px;
+    height: 60px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="Del"><h3>FooDeliciou'S</h3></div>
+    <div class="DelI">
+        <img src="{% static 'images/cartoon.jpg'%}" alt="">
+    </div>
+    <div id="Cap">
+        <h5><i>Taste the best [food] in town. <br> Book a table and see for yourself...</i></h5>
+    </div>
+    <div class="Welcome">
+        <h2><b>Welcome</b></h2>
+    </div>
+    <div class="back">
+        <h3><b>Back to...</b></h3>
+    </div>
+    <div id="Acn">
+        <h3 id="acn"><b>ACN's</b></h3>
+    </div>
+    <div id="Food">
+        <h3 id="food"><b>FooDeliciou'<i>S</i></b></h3>
+    </div>
+    <div class="nav-container">
+        <div class="nav-links">
+            <div><a href="{% url 'homeurl' %}" style="color: #FFD700;">Home</a></div>
+            <div><a href="{% url 'menuurl' %}">Menu</a></div>
+            <div><a href="{% url 'abouturl' %}">About Us</a></div>
+            <div><a href="{% url 'contacturl' %}">Contact Us</a></div>
+        </div>
+        <a href="{% url 'tableurl' %}">
+            <button class="book-btn">Book Table</button>
+        </a>
+    </div>
+    <div class="Image">
+        <img src="{% static 'images/cartoon.jpg'%}" alt="">
+    </div>
+</body>
+</html>

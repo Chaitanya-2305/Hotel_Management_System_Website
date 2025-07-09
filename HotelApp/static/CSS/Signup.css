@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+#main{
+    background-color: black;
+}
+#title{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+#sign{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+#sign input[type = submit]{
+    width: 70px;
+    height: 35px;
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0cap;
+}
+#images img{
+    margin-left: 500px;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}

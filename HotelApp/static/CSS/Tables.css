@@ -1,0 +1,294 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url("/static/images/Reserve.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.name{
+    color:rgb(255, 196, 0);
+    margin-left: 85px;
+    margin-top: 30px;
+    font-family: cursive;
+}
+.DelI img{
+    margin-top: -100px;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+}
+/* .Home{
+    position: absolute;
+    float: right;
+    margin-left: 760px;
+    margin-top: -105px;
+    transition: 1s;
+}
+.Home a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    transition: 1s;
+}
+.Home:hover{
+    transform: scale(1.2);
+}
+.Home a:hover{
+    color: orange;
+}
+.Menu{
+    position: absolute;
+    float: right;
+    margin-left: 850px;
+    margin-top: -105px;
+    transition: 1s;
+}
+.Menu a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    transition: 1s;
+}
+.Menu:hover{
+    transform: scale(1.2);
+}
+.Menu a:hover{
+    color: orange;
+}
+.About{
+    position: absolute;
+    float: right;
+    margin-left: 940px;
+    margin-top: -105px;
+    transition: 1s;
+}
+.About a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    transition: 1s;
+}
+.About:hover{
+    transform: scale(1.2);
+}
+.About a:hover{
+    color: orange;
+}
+.Contact{
+    position: absolute;
+    float: right;
+    margin-left: 1080px;
+    margin-top: -105px;
+    transition: 1s;
+}
+.Contact a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    transition: 1s;
+}
+.Contact:hover{
+    transform: scale(1.2);
+}
+.Contact a:hover{
+    color: orange;
+}*/
+input[type = button]{
+    width: 80px;
+    height: 35px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}
+.BT{
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    
+}
+.BT h2{
+    background-color: rgb(255, 196, 0);
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    margin-left: 435px;
+} 
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 610px;
+    margin-top: 20px;
+}
+
+.nav-links div {
+    font-size: x-large;
+    display: inline-block;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.nav-links div:hover {
+    transform: scale(1.2);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+.book-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: large;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+.about-content .text {
+    max-width: 50%;
+}
+
+.about-content .text h2 {
+    font-size: 36px;
+    color: #FFD700;
+}
+
+.about-content .text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-content .quote {
+    font-style: italic;
+    color: #FFD700;
+    margin-top: 15px;
+}
+
+.about-content .image img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+}
+.DT{
+    position: absolute;
+    color: white;
+    font-size: large;
+    font-family: cursive;
+    margin-left: 570px;
+    margin-bottom: -10px;
+}
+.LD{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 480px;
+}
+.LD input[type = datetime-local]{
+    height: 30px;
+    width: 300px;
+}
+.Guest{
+    margin-left: 460px;
+    margin-top: 130px;
+    width: 350px;
+    height: 100px;
+    border-radius: 10px;
+    background-color:whitesmoke;
+}
+.Sel{
+    margin-left: 130px;
+    font-family: cursive;
+}
+.Select{
+    position: relative;
+    font-family: cursive;
+    margin-left: 100px;
+    margin-top: -10px;
+}
+.Count{
+    margin-top: -10px;
+    margin-left: 80px;
+}
+.Name{
+    margin-left: 550px;
+    margin-top: 30px;
+    color: white;
+}
+.NBox input[type = text]{
+    width: 365px;
+    height: 30px;
+    border-radius: 5px;
+}
+.NBox{
+    margin-left: 460px;
+    margin-top: 10px;
+}
+.NBox input[type = number]{
+    width: 365px;
+    height: 30px;
+    border-radius: 5px;
+}
+.NBox input[type = email]{
+    width: 365px;
+    height: 30px;
+    border-radius: 5px;
+}
+.Special{
+    margin-left: 460px;
+    margin-top: 20px;
+}
+.Special input[type = text]{
+    width: 365px;
+    height: 60px;
+    border-radius: 5px;
+}
+.Submit{
+    margin-left: 600px;
+    margin-top: 40px;
+}
+#subs{
+    width: 100px;
+    height: 40px;
+    transition: 1s;
+    border: 0cap;
+    font-size: large;
+    background-color:rgb(255, 196, 0) ;
+    border-radius: 5px;
+}
+#subs:hover{
+    transform: scale(1.2);
+}
+#res{
+    margin-right: 30px;
+    text-align: center;
+    color: white;
+    font-size:large ;
+}

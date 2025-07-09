@@ -1,0 +1,210 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+#main{
+    background-color: black;
+}
+#title{
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+#img{
+    margin-top: 10px;
+    margin-right: 150px;
+    text-align: center;
+}
+#img img{
+    width: 300px;
+    height: 300px;
+}
+.Home a{
+    color: white;
+    text-decoration: none;
+    
+}
+.Home{
+    float: left;
+    margin-left: 50px;
+    margin-top: 170px;
+}
+.Home{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Home:hover{
+    transform:scale(1.2);
+}
+.Home a:hover{
+    color: rgb(255, 196, 0);
+}
+.About a{
+    color: white;
+    text-decoration: none;
+}
+.About{
+    float: left;
+    margin-top: 230px;
+    margin-left: -80px;
+}
+.About{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.About:hover{
+    transform:scale(1.2);
+}
+.About a:hover{
+    color:rgb(255, 196, 0);
+}
+.Contact a{
+    color: white;
+    text-decoration: none;
+}
+.Contact{
+    float: left;
+    margin-top: 290px;
+    margin-left: -105px;
+}
+.Contact{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Contact:hover{
+    transform:scale(1.2);
+}
+.Contact a:hover{
+    color:rgb(255, 196, 0);
+}
+.Book a{
+    color: white;
+    text-decoration: none;
+}
+.Book{
+    float: left;
+    margin-top: 360px;
+    margin-left: -100px;
+}
+.Book{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.Book:hover{
+    transform:scale(1.2);
+}
+.Book input[type = button]{
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}
+input[type = button]{
+    background-color: rgb(255, 196, 0);
+    color: white;
+}
+#cap{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-right: 150px;
+}
+#caption{
+    margin-left: 500px;
+    color: goldenrod;
+}
+#caption #nd{
+    margin-top: 5px;
+    margin-left: 150px;
+}
+.veg{
+    float: right;
+    margin-top: 100px;
+    margin-right: 70px;
+}
+.veg a{
+    color: white;
+    text-decoration: none;
+    
+}
+.veg{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.veg:hover{
+    transform:scale(1.2);
+}
+.veg a:hover{
+    color: rgb(255, 196, 0);
+}
+.nonveg{
+    float: right;
+    margin-top: 150px;
+    margin-right: -130px;
+}
+.nonveg a{
+    color: white;
+    text-decoration: none;
+    
+}
+.nonveg{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.nonveg:hover{
+    transform:scale(1.2);
+}
+.nonveg a:hover{
+    color: rgb(255, 196, 0);
+}
+.staters{
+    float: right;
+    margin-top: 200px;
+    margin-right: -130px;
+}
+.staters a{
+    color: white;
+    text-decoration: none;
+    
+}
+.staters{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.staters:hover{
+    transform:scale(1.2);
+}
+.staters a:hover{
+    color: rgb(255, 196, 0);
+}
+.drinks{
+    float: right;
+    margin-top: 250px;
+    margin-right: -110px;
+}
+.drinks a{
+    color: white;
+    text-decoration: none;
+    
+}
+.drinks{
+    font-size: x-large;
+    display: inline-block;
+    transition: 1s;
+}
+.drinks:hover{
+    transform:scale(1.2);
+}
+.drinks a:hover{
+    color: rgb(255, 196, 0);
+}

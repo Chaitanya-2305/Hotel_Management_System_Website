@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/Booking.css' %}">
+</head>
+<body>
+    <div id="tit">
+        ACN'S FOODELICIOU'S
+    </div>
+    <div id="td">
+        Today Bookings BosS...!
+    </div>
+    <div id="table">
+        <table border = "1" cellspacing = "0">
+            <tr><th>S.No</th><th>Date & Time</th><th>Customers Count</th><th>Name</th><th>Mobile</th><th>Gmail</th><th>Special Requests</th></tr>
+            {% for custs in customers %}
+            <tr><td>{{custs.id}}</td><td>{{custs.Date}}</td><td>{{custs.count}}</td><td>{{custs.name}}</td><td>{{custs.num}}</td><td>{{custs.mail}}</td><td>{{custs.spl}}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
